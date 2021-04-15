@@ -1,1 +1,23 @@
-<p>recipe-list works!</p>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn btn-success">New Recipe</div>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <a href="#" class="list-group-item d-flex" *ngFor="let recipe of recipes">
+      <div class="me-auto">
+        <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+        <p class="list-group-item-text">{{recipe.description}}</p>
+      </div>
+      <span class="ms-auto align-self-center">
+        <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-fluid img-thumbnail" style="max-height: 70px;">
+      </span>
+    </a>
+    <app-recipe-item></app-recipe-item>
+  </div>
+</div>
+
+
+
